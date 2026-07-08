@@ -16,6 +16,12 @@ class MailJob extends BaseJob
         //
     }
 
+    public function handle(): void
+    {
+        sleep(1);
+        parent::handle();
+    }
+
     protected function getName(): string
     {
         return 'mail';

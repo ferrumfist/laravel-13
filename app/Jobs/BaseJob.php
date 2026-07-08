@@ -15,7 +15,7 @@ abstract class BaseJob implements ShouldQueue
         $time = date('Y-m-d H:i:s');
 
         $name = $this->getName();
-        $line = "PID: {$pid} | NAME: {$name} | TIME: {$time}" . PHP_EOL;
+        $line = "PID: {$pid} | JOB: {$name} | TIME: {$time}" . PHP_EOL;
 
         file_put_contents(
             storage_path('logs/job.log'),

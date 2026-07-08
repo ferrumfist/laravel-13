@@ -20,4 +20,10 @@ class SimpleJob extends BaseJob
     {
         return 'simple';
     }
+
+    public function handle(): void
+    {
+        sleep(1);
+        parent::handle();
+    }
 }

@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Jobs\CalcJob;
 use App\Jobs\MailJob;
+use App\Jobs\SimpleJob;
 use Illuminate\Console\Attributes\Description;
 use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
@@ -19,6 +21,11 @@ class AddJob extends Command
         for ($i = 0; $i < 10; $i++) {
             MailJob::dispatch()
                 ->onQueue('mail');
+        }
+
+        for ($i = 0; $i < 10; $i++) {
+            SimpleJob::dispatch()
+                ->onQueue('simple');
         }
     }
 }
