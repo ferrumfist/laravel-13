@@ -9,7 +9,7 @@
         "php": "^8.3",
         "laravel/framework": "^13.8",
         "laravel/tinker": "^3.0",
-        "plesk/ext-laravel-integration": "^7.0"
+        "plesk/ext-laravel-integration": "dev-multi-queue-migrate"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -79,7 +79,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "plesk/ext-laravel-integration": true
         }
     },
     "minimum-stability": "stable",
